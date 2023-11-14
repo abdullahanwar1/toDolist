@@ -6,7 +6,6 @@
  */
 
 import React from 'react';
-
 import {
   SafeAreaView,
   ScrollView,
@@ -24,7 +23,6 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-
 
 
 function Section({children, title}) {
@@ -53,7 +51,7 @@ function Section({children, title}) {
   );
 }
 
-function App()  {
+function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -92,6 +90,15 @@ function App()  {
       </ScrollView>
     </SafeAreaView>
   );
+import {SafeAreaView} from 'react-native';
+import ToDoList from './ToDoList';
+import ToDoForm from './ToDoForm';
+
+function App() { <SafeAreaView>
+  <ToDoList />
+  <ToDoForm />
+</SafeAreaView>
+;
 }
 
 const styles = StyleSheet.create({
@@ -113,4 +120,5 @@ const styles = StyleSheet.create({
   },
 });
 
+export default App;
 export default App;
