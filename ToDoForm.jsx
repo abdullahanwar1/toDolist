@@ -10,7 +10,7 @@ function ToDoForm() {
       <Button title="Add" />
         </View>
     );
-}
+    }
 
 const styles = StyleSheet.create({
     form: {
