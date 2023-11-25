@@ -31,7 +31,6 @@ function AboutScreen({navigation}) {
       <SafeAreaView>
         <Text style={styles.title}>About tolistapp</Text>
         <TouchableOpacity onPress={handleNamePress}>
-          <Text style={styles.author}>Author: Hartaj Singh Mann</Text>
         </TouchableOpacity>
         <Text style={styles.date}>Current Date: {currentDate}</Text>
         <Button
