@@ -1,24 +1,20 @@
-import React, { useState } from 'react';
-import { SafeAreaView } from 'react-native';
-import ToDoList from './ToDoList';
-import ToDoForm from './ToDoForm';
-function App() {  const [tasks, setTasks] = useState([
-  'Do laundry',
-  'Go to gym',
-  'Walk dog'
-]);
-// Function to add a new task
-const addTask = (taskText) => {
-  // Prevent adding an empty task or a duplicate task
-  if (taskText && !tasks.includes(taskText)) {
-    setTasks([...tasks, taskText]);
-  }
-};
-<SafeAreaView>
-<ToDoList tasks={tasks} />
-  <ToDoForm />
-<ToDoForm addTask={addTask} />
-</SafeAreaView>
-;
+import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import HomeScreen from './src/screens/HomeScreen';
+import AboutScreen from './src/screens/AboutScreen';
+
+
+const Stack = createStackNavigator();
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen}/>
+        <Stack.Screen name="About" component={AboutScreen}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
 export default App;
