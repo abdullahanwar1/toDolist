@@ -1,26 +1,25 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 const Header = () => {
   return (
-    <View style={styles.header}>
-      <Text style={styles.headerText}>ToDoList</Text>
+    <View style={styles.headerContainer}>
+      <Text style={styles.headerText}>Your App Name</Text>
     </View>
   );
 };
 
-
-
-
 const styles = StyleSheet.create({
-  header: {
-    backgroundColor: '#222',
+  headerContainer: {
+    backgroundColor: '#3498db', // Set your preferred background color
     padding: 10,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   headerText: {
-    color: '#fff',
+    color: '#fff', // Set your preferred text color
     fontSize: 20,
+    fontWeight: 'bold',
   },
 });
 
